@@ -6,6 +6,7 @@ def saludar(nombre: str) -> str:
     return f"Hola {nombre}, tu solicitud fue enrutada exitosamente."
 
 @app.route("api/calcular_iva/<int:precio>", methods= ["GET"])
+@app.route("/api/calcular_iva/<int:precio>", methods= ["GET"])
 def clacular (precio: int) -> str: 
     iva: float = precio * 0.19
     total: float = precio + iva

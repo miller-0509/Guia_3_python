@@ -5,7 +5,6 @@ app = Flask (__name__)
 def saludar(nombre: str) -> str:
     return f"Hola {nombre}, tu solicitud fue enrutada exitosamente."
 
-@app.route("api/calcular_iva/<int:precio>", methods= ["GET"])
 @app.route("/api/calcular_iva/<int:precio>", methods= ["GET"])
 def clacular (precio: int) -> str: 
     iva: float = precio * 0.19
@@ -14,3 +13,6 @@ def clacular (precio: int) -> str:
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+    

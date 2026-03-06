@@ -21,4 +21,3 @@ def crear_usuario() -> tuple[Response, int]:
 
 if __name__ == '__main__':
     app.run(debug=True)
-    
